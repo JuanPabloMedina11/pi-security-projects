@@ -2,12 +2,12 @@
 
 ## 2026-10-08 · Stage 1: Foundation and hardening
 
-**Setup:** Raspberry Pi 5 (8GB), 256GB SanDisk microSD, Raspberry Pi OS Lite (64-bit)
+**Setup:** Raspberry Pi 5 (8GB), 256GB SanDisk microSD, Raspberry Pi OS (64-bit)
 
 ### What I did
 
 1. Created an `ed25519` SSH key pair on my laptop. The private key stays on the laptop and the public key goes on the Pi, so I can log in without a password that could be guessed.
-2. Installed Raspberry Pi OS Lite (64-bit) on the microSD card with Raspberry Pi Imager. I chose Lite because it has no desktop, which leaves more memory for services.
+2. Installed Raspberry Pi OS (64-bit) on the microSD card with Raspberry Pi Imager. I chose Lite because it has no desktop, which leaves more memory for services.
 3. Booted the Pi with a monitor and keyboard, connected it to Wi-Fi, and updated everything with `sudo apt update && sudo apt full-upgrade`.
 4. Set up SSH so it only accepts my key, with password login turned off.
 5. Turned on the firewall with `ufw`. It blocks all incoming connections except SSH and allows outgoing ones, so anything I install later stays closed until I open it on purpose.
